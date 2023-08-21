@@ -6,6 +6,10 @@ void main(List<String> args) {
   Person janeDoe = Person(name: 'Jane Doe');
   WrongImplementationOfFamilyMembers myFamily =
       WrongImplementationOfFamilyMembers(members: [bheema, janeDoe]);
+
+  /// if you see here 'Getting Members Count' will be printed. Thats what if you assign late variale in the constructor then it is going to
+  /// resolve immediately.
+  /// Instead you must assign it like this 'late int membersCount = getMembersCount();
 }
 
 class Person {
@@ -26,3 +30,6 @@ class WrongImplementationOfFamilyMembers {
     return members.length;
   }
 }
+
+/// correct implementation 
+

@@ -14,8 +14,10 @@ void main(List<String> args) {
   print(age);
   print(age3);
 
-  /// along with age3 being 21, initial value of age that is 30 also changes to 21.
+  /// along with age3 being 21, initial value of age that is 22 also changes to 21.
 
   /// Unary bitwise complement prefix operator
-  print(~1);
+  print(~1); // this resuls in -2
+  /// 1 = (0000 0000) (0000 0000) (0000 0000) (0000 0001)
+  /// -2 = (1111 1111) (1111 1111) (1111 1111) (1111 1110)
 }
