@@ -1,6 +1,6 @@
 /// Functions as First class Citizens
 /// So, what are first class functions.
-/// Functions in dart can be passed to another functions. Dart is capable of determing a functions as data type.
+/// Functions in dart can be passed to another functions. Dart is capable of determining a functions as data type.
 /// Any programming language which understands the datatype of function then it allows functions to be first class citizens.
 
 void main(List<String> args) {

@@ -10,6 +10,7 @@ void main(List<String> args) {
       null; // here the ?  is optionality which means that the variable can have a value or not.
 
   /// ??= This is the compound null aware compound assignment operator which takes the value of the right and assign it to left if and only if the left is null.
+  /// ?? Takes the value of the right and put it to left only if left is null but unlike above it doesnt assign the value to the left. It would still be null in any case.
 
   String? someName;
   someName ?? 'New Name';
@@ -35,8 +36,11 @@ void main(List<String> args) {
   /// The above is dead code because null aware operator works like this. If names is not a null, only then invoke a function add to that. Here the names is null Hence dead code
   print(names);
 
-  ///  Null Check Operator (!) - I dont care whether the variables is null or not, I want to force read it.
+  ///  Null assertion Operator (!) - I dont care whether the variables is null or not, I want to force read it.
   /// (!) says names is non-null and selects the property add unles names is null. If it is the program will crash.
+  ///  (!) like said above this is forcing the dart to treat the expression as non nullable beacuse sometimes the flow of code tells us the expression cannot be null.
+  /// If incase the expression is null then dart throws an exception
+  /// assert - If the boolean expression in assert operator is true then the code continues otherwise it'll throw assertion error.
   names!.add('Foo');
 
   String? lastName = 'Sathish';
@@ -47,6 +51,8 @@ void main(List<String> args) {
 
   changeLastName();
 
+  /// So what exactly is ?. operator - Its like telling dart like below.
+  /// Hey, evaluate this expression if lastName is not null and if the lastName is null, thats okay, make it null but just dont throw an error.
   if (lastName?.contains('Umesh') ?? false) {
     print('Last Name contains Umesh');
   }
@@ -55,5 +61,23 @@ void main(List<String> args) {
     print('This method is not advised compared to above');
   }
 
-  // watch optionals Extending optional Types
+//   The two statements you provided are similar, but there is a subtle difference in how they work:
+
+// if (lastName?.contains('Umesh') ?? false) { ... }
+// This statement uses the null-aware operator ?. to safely access the contains method on the lastName object.
+// If lastName is null, the entire expression evaluates to null. Then, the ?? operator provides a default value of false.
+// So, if lastName is null or doesn't contain 'Umesh', the condition evaluates to false. If lastName is not null and contains 'Umesh', the condition evaluates to true.
+
+// if (lastName?.contains('Mangesh') == true) { ... }
+// This statement also uses the null-aware operator to safely access the contains method on lastName.
+// However, it explicitly checks if the result of contains is equal to true. If lastName is null, the condition evaluates to false.
+// If lastName is not null and contains 'Mangesh', the condition evaluates to true.
+
+// In summary, both statements perform similar checks for the presence of a substring in lastName while handling potential null values.
+// However, the first statement (?? false) ensures that if lastName is null, it evaluates to false directly, while the second statement explicitly checks if the result is equal to true.
+
+// The first statement is more concise and idiomatic in many programming languages, and it directly produces a boolean result, making it easier to read and understand.
+// Therefore, it is generally recommended to use the first statement for such checks in languages that support null-aware operators like Dart.
+
+// watch optionals Extending optional Types
 }

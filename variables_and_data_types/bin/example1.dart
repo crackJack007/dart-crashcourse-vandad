@@ -1,11 +1,17 @@
+import 'dart:io';
+
 void main(List<String> args) {
-  const list = [1, 2, 3];
+   var list = [1, 2, 3];
   list.removeAt(0);
 
   print(list);
 
   // invalid code
   // name = 'Hello';
+
+  print('Enter your name');
+  String name = stdin.readLineSync()!;
+  stdout.write('The name entered is $name');
 }
 
 /// what is a keyword?
@@ -19,7 +25,7 @@ void main(List<String> args) {
 /// const avoids two kind of modifications 
 ///  1) assigning a new value to that variable such as list = ['Hello'];
 ///  2) modifications to that value itself for example  list.removeAt(0); ERROR: cannot remove from an unmodifiable list 
-/// although point 2 is compliable but throws an exception at runtime. 
+/// although point 2 is compilable but throws an exception at runtime. 
 /// 
 /// what is a variable?
 /// Its also a data but the meaning of variables is something which constantly changes or mutates

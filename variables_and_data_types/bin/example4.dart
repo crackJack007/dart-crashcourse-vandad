@@ -1,4 +1,4 @@
-void main(List<String> args) {
+  void main(List<String> args) {
   // final age = 10;
   // const age2 = age; this is an invalid behaviour but the other way round is possible.
   const int age = 10;
