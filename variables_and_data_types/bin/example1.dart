@@ -17,9 +17,9 @@ void main(List<String> args) {
 /// what is a keyword?
 /// It is a special word reserved in a programming language.
 
-///  what is const?
-/// It is a data that you specify while writing your code and it will then be held inside the memory, wherever dart saves it and we wont 
-/// be able to modify that data at all after it is created. 
+///  what is const and final?
+///  They are variables both used for declaring constants. Except that final is run time constant where as
+///  const is compile time const.
 /// simply put: data is not mutable after it is created. 
 /// 
 /// const avoids two kind of modifications 
@@ -28,5 +28,5 @@ void main(List<String> args) {
 /// although point 2 is compilable but throws an exception at runtime. 
 /// 
 /// what is a variable?
-/// Its also a data but the meaning of variables is something which constantly changes or mutates
+/// A variable is a named storage location in a computer's memory that is used to store data during the execution of a program
 /// simply put: a variable can't be a constant but a constant can be a variable. 

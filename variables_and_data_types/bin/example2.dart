@@ -4,9 +4,7 @@ void main(List<String> args) {
   list.removeAt(0); // this operation is allowed in final
 }
 
-/// what is final ?
-/// final keyword can have data where you cannot assign a new value but the internal value can be modified during compile time
-/// 
+/// final keywords allows modifications of the value in mutable objects such as collections (lists, set and Map).
 /// what is compile time?
 ///  source code is converted into executable code
 /// 
