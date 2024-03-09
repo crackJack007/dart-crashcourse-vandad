@@ -1,4 +1,4 @@
-import 'package:exercise/exercise.dart';
+import 'package:exercise/documentation.dart';
 import 'package:test/test.dart';
 
 void main() {

@@ -21,6 +21,9 @@
       <excludeFolder url="file://$MODULE_DIR$/operators/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/operators/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/operators/build" />
+      <excludeFolder url="file://$MODULE_DIR$/collections/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/collections/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/collections/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
